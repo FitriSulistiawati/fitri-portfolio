@@ -315,12 +315,12 @@ export default function App() {
     <>
       <Cursor />
       <div className="scroll-progress" aria-hidden="true"><span ref={progressRef} /></div>
-      <header className={"nav from-top motion" + (scrolled ? " solid" : "")}>
+      <header className={"nav" + (scrolled ? " solid" : "")}>
         <a href="#top" className="logo" onClick={() => setMenuOpen(false)}>Fitri</a>
-        <button className="menu-toggle" type="button" aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"} aria-expanded={menuOpen} onClick={() => setMenuOpen((open) => !open)}>
+        <button className="menu-toggle" type="button" aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"} aria-controls="primary-navigation" aria-expanded={menuOpen} onClick={() => setMenuOpen((open) => !open)}>
           <span /><span /><span />
         </button>
-        <nav className={menuOpen ? "menu-open" : ""} aria-label="Main navigation">
+        <nav id="primary-navigation" className={menuOpen ? "menu-open" : ""} aria-label="Main navigation">
           {["about", "projects", "experience", "skills", "publication", "certifications", "contact"].map((section) => <a key={section} className={activeSection === section ? "active" : ""} href={`#${section}`} onClick={() => setMenuOpen(false)} data-tip={`Go to ${section}`}>{section === "publication" ? "Publication" : section}</a>)}
           {p.cv && <a className="btn sm" href={p.cv} download data-tip="Download curriculum vitae" onClick={() => setMenuOpen(false)}>Download CV</a>}
         </nav>
@@ -332,6 +332,7 @@ export default function App() {
         <h1 className="hero-name">
           <span className="typing-reserve" aria-hidden="true">{p.name}</span>
           <span className={`typing-live${heroTyping.done ? " typing-done" : ""}`} aria-label={p.name}>{heroTyping.text}<i className="typing-caret" aria-hidden="true" /></span>
+          <span className="mobile-name">{p.name}</span>
         </h1>
         <em className="fade-in motion" style={{ "--d": ".45s" }}>{p.tagline}</em>
         <p className="from-bottom motion" style={{ "--d": ".12s" }}>{p.summary}</p>

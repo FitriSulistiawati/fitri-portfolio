@@ -31,7 +31,8 @@ h1, h2, h3 { font-weight: 400; line-height: 1.08; }
 .c-tip { padding: 5px 11px; border-radius: 99px; background: var(--acc); color: #0b1326; font-size: .78rem; font-weight: 600; opacity: 0; white-space: nowrap; transition: opacity .2s; }
 .c-tip.show { opacity: 1; }
 
-.nav { position: fixed; inset: 0 0 auto; z-index: 50; display: flex; justify-content: space-between; align-items: center; padding: 18px 32px; transition: .4s; }
+.nav { position: fixed; inset: 0 0 auto; z-index: 50; display: flex; justify-content: space-between; align-items: center; padding: 18px 32px; transition: .4s; animation: nav-enter .7s cubic-bezier(.2, .7, .2, 1) both; }
+@keyframes nav-enter { from { opacity: 0; transform: translateY(-100%); } to { opacity: 1; transform: translateY(0); } }
 .nav.solid { padding: 12px 32px; border-bottom: 1px solid var(--line); background: #0b1326ee; backdrop-filter: blur(10px); }
 .logo { font-family: Fraunces, serif; font-size: 1.5rem; }
 .nav nav { display: flex; gap: clamp(12px, 2vw, 26px); align-items: center; font-size: .76rem; text-transform: uppercase; letter-spacing: .06em; }
@@ -55,6 +56,7 @@ h1, h2, h3 { font-weight: 400; line-height: 1.08; }
 .typing-reserve, .typing-live { grid-area: 1 / 1; }
 .typing-reserve { visibility: hidden; }
 .typing-live { position: relative; display: block; overflow-wrap: anywhere; }
+.mobile-name { display: none; }
 .typing-caret { display: inline-block; width: .055em; height: .82em; margin-left: .07em; vertical-align: -.04em; background: currentColor; animation: caret-blink .75s step-end infinite; }
 .typing-done .typing-caret { visibility: hidden; animation: none; }
 .typing-line { display: inline; }
@@ -195,6 +197,9 @@ h1, h2, h3 { font-weight: 400; line-height: 1.08; }
   .nav nav a:not(.btn) { display: flex; min-height: 48px; align-items: center; border-bottom: 1px solid var(--line); }
   .nav nav .btn { align-self: flex-start; margin-top: 14px; }
   .hero { min-height: 90svh; padding-right: 20px; padding-left: 20px; }
+  .hero-name { font-size: clamp(1.8rem, 8.5vw, 2.6rem); }
+  .hero-name .typing-reserve, .hero-name .typing-live { display: none; }
+  .hero-name .mobile-name { display: block; grid-area: 1 / 1; width: 100%; color: var(--ink); font-size: inherit; line-height: 1.15; overflow-wrap: anywhere; }
   .about, .project, .exp, .publication { grid-template-columns: minmax(0, 1fr); gap: 24px; }
   .about { gap: 30px; }
   .photo { width: min(100%, 320px); }

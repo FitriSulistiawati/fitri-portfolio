@@ -6,7 +6,7 @@ export const profile = {
   location: "Sukabumi, Indonesia",
   status: "Available for entry-level opportunities",
   photo: "/images/profile.jpg",
-  cv: "https://drive.google.com/file/d/13BI8377B3jW0uzs_74xTpJ_MWq54dHzm/view?usp=drivesdk",
+  cv: "https://drive.google.com/uc?export=download&id=13BI8377B3jW0uzs_74xTpJ_MWq54dHzm",
   email: "ashfahanifitri@gmail.com",
   phone: "085559710178",
   linkedin: "https://www.linkedin.com/in/fitri-sulistiawati/",
