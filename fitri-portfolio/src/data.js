@@ -6,12 +6,12 @@ export const profile = {
   location: "Sukabumi, Indonesia",
   status: "Available for entry-level opportunities",
   photo: "/images/profile.jpg",
-  cv: "https://drive.google.com/uc?export=download&id=13BI8377B3jW0uzs_74xTpJ_MWq54dHzm",
+  cv: "https://drive.google.com/file/d/11ZxFT76EWIrBGLeHvCp1PgbToXGGvKly/view?usp=sharing",
   email: "ashfahanifitri@gmail.com",
   phone: "085559710178",
   linkedin: "https://www.linkedin.com/in/fitri-sulistiawati/",
   github: "https://github.com/FitriSulistiawati",
-  about: "Informatics Engineering graduate from Nusa Putra University with interests in artificial intelligence, machine learning, and software development. Developed an information and recommendation chatbot using TF-IDF and cosine similarity with Flask and React.",
+  about: "Informatics Engineering graduate from Nusa Putra University with interests in IT support,artificial intelligence, machine learning, and software development. Developed an information and recommendation chatbot using TF-IDF and cosine similarity with Flask and React.",
   education: { school: "Nusa Putra University", degree: "Bachelor of Informatics Engineering (S.Kom)", period: "Sep 2022 - Aug 2026", gpa: "3.45 / 4.00" },
 };
 
